@@ -6,14 +6,19 @@ using namespace std;
 class Mochila
  {
     public:
-    bool vazio(); //meu Empty se esta vazio ou quantos itens tem
-    bool cheio(); // tira os itens para serem usados
-    void InserirItens(int x); // coloca itens na mochila
-    void RemoverItens(int &x);//remove os itens da mochila
-    void Size();
-    void Top(); // mostra o primeiro elemento da pilha que esta no topo
+    bool Empty(); //meu Empty se esta vazio ou quantos itens tem
+    void Push(string x); // meu push coloca itens na mochila
+    void Pop(string  &x);// meu pop remove os itens da mochila
+    void Size(); // me retorna o tamhno (tanto de coisas que tiverem na mochila)
+    void Top(string &x); // mostra o primeiro elemento da pilha que esta no topo
     void Clear(); // limpa os elementos da pilha
 private:
+struct MochilaNode {
+    string Item;
+    MochilaNode *NextNode;
+};
+MochilaNode *top;
+int Size;
 
 };
 /*-------------------------------------------------------------------------------------------------------*/
@@ -31,6 +36,11 @@ bool Capacidade(); //
 void peso(); // 
 void Slots(); // quais estão sendo usados e quais estão vazios
 private:
+struct CintoNode
+{
+CintoNode *
+};
+
 };
 
 
