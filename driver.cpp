@@ -3,8 +3,7 @@
 using namespace std;
 
 int main(){
-    
-    Cinto cinto;
+   Cinto cinto;
     Item ItemCriador;
 
     CriandoItem espada = {ItemCriador.Dano(ESPADA), ItemCriador.Nome(ESPADA), ItemCriador.Peso(ESPADA), ItemCriador.Cura(ESPADA), ItemCriador.Defesa(ESPADA)};
@@ -15,6 +14,47 @@ int main(){
     CriandoItem PocaoDeDefesa = {ItemCriador.Dano(POCAODEDEFESA), ItemCriador.Nome(POCAODEDEFESA), ItemCriador.Peso(POCAODEDEFESA), ItemCriador.Cura(POCAODEDEFESA), ItemCriador.Defesa(POCAODEDEFESA)};
     CriandoItem PocaoDaSorte = {ItemCriador.Dano(POCAODASORTE), ItemCriador.Nome(POCAODASORTE), ItemCriador.Peso(POCAODASORTE), ItemCriador.Cura(POCAODASORTE), ItemCriador.Defesa(POCAODECURA)};
 
+
+    Heroi meuHeroi1("Mago",0,0,0,0,0," ");
+    Heroi meuHeroi2("Bárbaro",0,0,0,0,0," ");
+    Heroi meuHeroi3("Arqueira",0,0,0,0,0," ");
+    Heroi meuHeroi4("Bruxa",0,0,0,0,0," ");
+
+    meuHeroi1.MostrandoTudo();
+    meuHeroi2.MostrandoTudo();
+    meuHeroi3.MostrandoTudo();
+    meuHeroi4.MostrandoTudo();
+
+
+cout<< "Escolha seu Heroi"<<endl;
+EscolhaseuHeroi();
+
+while (heroiescolhido < 1 || heroiescolhido > 4){
+cout<< "opção inválida, escolha um número válido"<< endl;
+EscolhaseuHeroi();
+}
+
+switch (heroiescolhido)
+{
+case (1):
+    cout << "você escolheu o  MAGO"<< endl;
+    break;
+
+case (2):
+    cout << "você escolheu o  Bárbaro"<< endl;
+    break;
+
+case (3):
+    cout << "você escolheu o Arqueira"<< endl;
+    break;
+
+case (4):
+    cout << "você escolheu o Bruxa"<< endl;
+    break;
+
+default:
+    break;
+}
 
     return 0;
 

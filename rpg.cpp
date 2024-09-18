@@ -300,9 +300,6 @@ void Cinto::exibirCinto() {
 
 
 
-
-
-
 void Heroi::MostrandoTudo(){
 
 cout<< "Name" << Name <<endl;
@@ -328,6 +325,8 @@ if (HP>200) // verificacao da vida
 };
 
 };
+
+
 
 
 
