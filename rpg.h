@@ -1,7 +1,3 @@
-// armas e pocoes
-// vida, ataque, defesa, 
-#include <string>
-using namespace std;
 
 // Criando os inimigos do RPG;
 enum TipoInimigo {
@@ -145,14 +141,32 @@ class Cinto {
 class Heroi
 {
     public:
-    Heroi(const string name,int hp, int ataque,
+    // -- TIPO DO MEU HEROI -- //
+    enum EnumTipoHeroi
+    {
+        mago = 1,
+        arqueira = 2,
+        bruxa = 3,
+        barbaro = 4,
+    };
+    static void FuncaoMeuHeroi(EnumTipoHeroi heroi);
+
+    // -- ATRIBUTOS DO HEROI --
+    Heroi(
+    const string name,
+    int hp,
+    int ataque,
     int defesa, 
     int agilidade, 
     int luck, 
     string especial);
+
 void MostrandoTudo();
+void recebe dano();
 
     ~Heroi(); //destrutor
+
+    // -----------PRIVATE------------- //
     private:
         const string Name;
         int HP;
@@ -194,7 +208,6 @@ int Nivel; // irao do 1 ao 5
 Raridade raridade;
 };
 
-int EscolhaseuHeroi;
 /*-------------------------------------------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------------------------------------------*/

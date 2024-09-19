@@ -3,7 +3,6 @@
 using namespace std;
 
 int main(){
-    int Heroi_Escolhido = 0;
    Cinto cinto;
     Item ItemCriador;
 
@@ -32,37 +31,22 @@ int main(){
     meuHeroi3.MostrandoTudo();
     meuHeroi4.MostrandoTudo();
 
+//--------------------------------- MENU PARA ESCOLHER O HEROI ----------------------------------------------//
+int EscolhaHeroi;
 
 cout<< "Escolha seu Heroi"<<endl;
-Heroi_Escolhido = EscolhaseuHeroi;
+cout << "1 - Mago"<< endl;
+cout << "2 - Bárbaro"<< endl;
+cout << "3 - Arqueira" << endl;
+cout << "4 - Bruxa" << endl;
+cin>> EscolhaHeroi;
 
-
-while (Heroi_Escolhido < 1 || Heroi_Escolhido > 4){
-cout<< "opção inválida, escolha um número válido"<< endl;
-Heroi_Escolhido = EscolhaseuHeroi();
+if (EscolhaHeroi >=1 && EscolhaHeroi <=4){
+    Heroi::EnumTipoHeroi heroi = (static_cast<Heroi::EnumTipoHeroi>(EscolhaHeroi)) //chamo meu construtor da minha classe heroi, chamo meu enum e converto o tipoheroi
+}else{
+    cout << "Opção inválida, por favor digite um número de 1 a 4"<< endl;
 }
 
-switch (Heroi_Escolhido)
-{
-case (1):
-    cout << "você escolheu o  MAGO"<< endl;
-    break;
-
-case (2):
-    cout << "você escolheu o  Bárbaro"<< endl;
-    break;
-
-case (3):
-    cout << "você escolheu o Arqueira"<< endl;
-    break;
-
-case (4):
-    cout << "você escolheu o Bruxa"<< endl;
-    break;
-
-default:
-    break;
-}
 
     return 0;
 

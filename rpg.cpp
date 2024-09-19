@@ -326,19 +326,31 @@ if (HP>200) // verificacao da vida
 
 };
 
-int EscolhaseuHeroi()
+
+ void Heroi::FuncaoMeuHeroi (EnumTipoHeroi heroi)
+ {
+switch (heroi)
 {
-    int heroiescolhido;
-cout << "1 - Mago"<< endl;
-cout << "2 - Bárbaro"<< endl;
-cout << "3 - Arqueira" << endl;
-cout << "4 - Bruxa" << endl;
-cin>> heroiescolhido;
-return heroiescolhido;
+case mago:
+    cout << "você escolheu o  MAGO"<< endl;
+    break;
+
+case barbaro:
+    cout << "você escolheu o  Bárbaro"<< endl;
+    break;
+
+case arqueira:
+    cout << "você escolheu o Arqueira"<< endl;
+    break;
+
+case bruxa:
+    cout << "você escolheu o Bruxa"<< endl;
+    break;
+
+default:
+    break;
 }
-
-
-
+}
 
 
 
