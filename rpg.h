@@ -194,16 +194,7 @@ int Nivel; // irao do 1 ao 5
 Raridade raridade;
 };
 
-
-int heroiescolhido;
-void EscolhaseuHeroi( )
-{
-cout << "1 - Mago"<< endl;
-cout << "2 - Bárbaro"<< endl;
-cout << "3 - Arqueira" << endl;
-cout << "4 - Bruxa" << endl;
-cin>> heroiescolhido;
-}
+int EscolhaseuHeroi;
 /*-------------------------------------------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------------------------------------------*/

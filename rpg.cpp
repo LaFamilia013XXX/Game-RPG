@@ -326,6 +326,17 @@ if (HP>200) // verificacao da vida
 
 };
 
+int EscolhaseuHeroi()
+{
+    int heroiescolhido;
+cout << "1 - Mago"<< endl;
+cout << "2 - Bárbaro"<< endl;
+cout << "3 - Arqueira" << endl;
+cout << "4 - Bruxa" << endl;
+cin>> heroiescolhido;
+return heroiescolhido;
+}
+
 
 
 
