@@ -1,39 +1,7 @@
 
-// Criando os inimigos do RPG;
-enum TipoInimigo {
-    TIPO1,
-    TIPO2,
-    TIPO3,
-    TIPO4,
-    TIPO5,
-    TIPO6,
-    TIPO7,
-    TIPO8,
-    TIPO9,
-    TIPO10,
-    BOSS1,
-    BOSS2,
-    BOSS3,
-    BOSS4,
-    BOSS5,
-    NUM_TIPOS_DE_INIMIGOS
-};
 
-struct CriandoInimigo {
-    int dano;
-    int barraVida;
-};
 
-class Inimigo_generico {
-    public:
-        Inimigo_generico();
-        int dano(TipoInimigo tipoInimigo) const;
-        int barraVida(TipoInimigo tipoInimigo) const;
-    
-    private:
-        CriandoInimigo inimigos[NUM_TIPOS_DE_INIMIGOS];
-        void iniciandoInimigo();
-};
+
 
 
 // Criando os Itens do RPG;
@@ -151,7 +119,7 @@ class Heroi
     };
     static void FuncaoMeuHeroi(EnumTipoHeroi heroi);
 
-    // -- ATRIBUTOS DO HEROI --
+    // ---- ATRIBUTOS DO HEROI ---- //
     Heroi(
     const string name,
     int hp,
@@ -161,8 +129,8 @@ class Heroi
     int luck, 
     string especial);
 
-void MostrandoTudo();
-void recebe dano();
+void MostrandoTudo(); // EXIBE TODOS OS ATRIBUTOS
+void RecebeDano();
 
     ~Heroi(); //destrutor
 
@@ -176,38 +144,8 @@ void recebe dano();
         int Luck;
         string Especial;
 };
-/*-------------------------------------------------------------------------------------------------------*/
 
-class Itens{
-public: 
-enum class Tipo 
-{
-    PocaodeCura, // Cura o Heroi
-    PocaodoPoder, // da um UPP em tudo (HP, Ataque, Defesa, Agilidade e Luck)
-    PocaodeDefesa, // aumenta tmeporariamente a defesa (escudo do heroi)
-    PocaodaSorte, // aumenta a sorte de dar crítico e/ou esquivar de um inimigo
-    Espada, // para o Barbaro
-    Machado, // para o Barbaro
-    Varinha //do mago
+class Habilidade {
+
+
 };
-
-enum class Raridade
-{
-    Comum,
-    Raro,
-    Epico,
-    Lendario
-};
-
-Itens(Tipo tipo, int Nivel, Raridade raridade); 
-~Itens();
-
-private:
-Tipo tipo;
-int Nivel; // irao do 1 ao 5
-Raridade raridade;
-};
-
-/*-------------------------------------------------------------------------------------------------------*/
-
-/*-------------------------------------------------------------------------------------------------------*/

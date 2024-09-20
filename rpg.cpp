@@ -5,76 +5,7 @@ using namespace std;
 #ifndef RPG_H
 #define RPG_H
 
-
-// Funções inimigos, declaração de valores e estruturas.
-
-Inimigo_generico::Inimigo_generico(){
-    iniciandoInimigo();
-}
-
-void Inimigo_generico::iniciandoInimigo() {
-    // Inimigos Simples do Mapa;
-    inimigos[TIPO1] = {10, 100};
-    inimigos[TIPO2] = {13, 130};
-    inimigos[TIPO3] = {16, 160};
-    inimigos[TIPO4] = {19, 190};
-    inimigos[TIPO5] = {22, 220};
-    inimigos[TIPO6] = {25, 250};
-    inimigos[TIPO7] = {28, 280};
-    inimigos[TIPO8] = {31, 310};
-    inimigos[TIPO9] = {34, 340};
-    inimigos[TIPO10] = {37, 370};
-}
-
-int Inimigo_generico::dano(TipoInimigo tipoInimigo) const {
-    return inimigos[tipoInimigo].dano;
-}
-
-int Inimigo_generico::barraVida(TipoInimigo tipoInimigo) const {
-    return inimigos[tipoInimigo].barraVida;
-}
-
-
-// Classes de itens e seu atributos;
-
-Item::Item(){
-    IniciandoItem();
-}
-
-void Item::IniciandoItem() {
-    itens[POCAODASORTE] = {10, "Porcao Sorte", 10, 10, 0};
-    itens[POCAODECURA] = {0, "Pocao Cura", 15, 30, 0};
-    itens[POCAODEDEFESA] = {0, "Pocao defesa", 20, 0, 30};
-    itens[POCAODEPODER] = {10, "Pocao Poder", 30, 10, 10};
-    itens[ESPADA] = {25, "Espada", 25, 0, 0};
-    itens[MACHADO] = {20, "Machado", 20, 0, 0};
-    itens[VARINHA] = {20, "Varinha", 20, 0, 0};
-};
-
-int Item::Dano(Tipo tipo) const {
-    return itens[tipo].Dano;
-}
-
-int Item::Cura(Tipo tipo) const {
-    return itens[tipo].Cura;
-}
-
-string Item::Nome(Tipo tipo) const {
-    return itens[tipo].Nome;
-}
-
-int Item::Defesa(Tipo tipo) const {
-    return itens[tipo].Defesa;
-}
-
-int Item::Peso(Tipo tipo) const {
-    return itens[tipo].Peso;
-}
-
-
-
-
-
+/*
 // Lista Estatica:
 
 List::List(){
@@ -297,8 +228,7 @@ void Cinto::exibirCinto() {
         cout << Entry[i].Nome << endl;
     }
 }
-
-
+*/
 
 void Heroi::MostrandoTudo(){
 
@@ -310,7 +240,7 @@ cout << "Agilidade" << Agilidade <<endl;
 cout << "Luck" << Luck <<endl;
 cout << "Especial" << Especial <<endl;
 
-};
+}
 
 Heroi::Heroi (const string name, int hp, int ataque, int defesa, int agilidade, int luck, string especial):
 Name (name), HP(hp), Ataque (ataque), Defesa (defesa), Agilidade (agilidade), Luck (luck), Especial (especial)
@@ -326,8 +256,7 @@ if (HP>200) // verificacao da vida
 
 };
 
-
- void Heroi::FuncaoMeuHeroi (EnumTipoHeroi heroi)
+ void Heroi::FuncaoMeuHeroi (EnumTipoHeroi heroi) //construtor da minha classe com parametros
  {
 switch (heroi)
 {
