@@ -146,6 +146,23 @@ void RecebeDano();
 };
 
 class Habilidade {
+    public:
+void Toxic_Arrow();
+void Flame_Arrow();
+void Arrow();
+void Eletric_Sword();
+void Punt();
+void Flame_sword();
+void Skeleton();
+void Suicid();
+void Magic();
+void Fire_ball();
+void Eletric_Ball();
+void Ball_Magic();
+
+
+
+    private:
 
 
 };
