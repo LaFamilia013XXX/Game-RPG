@@ -281,6 +281,81 @@ default:
 }
 }
 
+void Habilidade::ToxicArrow(int Dano,int &DanoporRound, int &Duracao)
+{
+    if(Duracao>0){
+        DanoporRound = 15;
+        Duracao--;
+        cout<<"Dano apos o efeito"<<Dano + << Duracao*DanoporRound<<endl;
+    }else{
+        DanoporRound = 0;
 
+    }
+}
+
+// Reduz 20% do dano do inimigo 
+int Habilidade::ReduzirDano(int &DanoRecibido){
+    int DanoReduzido = DanoRecibido * 0.8;
+    return DanoReduzido;
+
+}
+
+  void habilidade::FlameArrow(int &Dano, int &Duracao)
+  {
+
+    if (Duracao > 0 ){
+
+        Dano = 60;
+        ReduzirDano();
+        Duracao--;
+    }else{
+        Dano = 0;
+
+    }
+
+
+  }      
+    void Habilidade::Arrow(int &Dano)
+    {
+    Dano = 45;
+    }     
+
+    void ElectricSword() 
+    {
+        
+
+    }
+    void Punt()    
+    {
+
+    }       
+    void FlameSword() 
+    {
+
+    }   
+    void SummonSkeleton() 
+    {
+
+    }
+    void Suicide() 
+    {
+
+    }        
+    void Magic()  
+    {
+
+    }      
+    void FireBall() 
+    {
+
+    }      
+    void ElectricBall()
+    {
+
+    }
+    void MagicBall()
+    {
+
+    }
 
 #endif

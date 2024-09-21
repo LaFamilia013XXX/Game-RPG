@@ -146,23 +146,25 @@ void RecebeDano();
 };
 
 class Habilidade {
-    public:
-void Toxic_Arrow();
-void Flame_Arrow();
-void Arrow();
-void Eletric_Sword();
-void Punt();
-void Flame_sword();
-void Skeleton();
-void Suicid();
-void Magic();
-void Fire_ball();
-void Eletric_Ball();
-void Ball_Magic();
+public:
+    // Funções para as habilidades
+    void ToxicArrow(int Dano, int &DanoporRound, int &Duracao);
+    void FlameArrow(int &Dano, int &Efeito); 
+    int ReduzirDano (int &DanoRecibido);
+    void Arrow();            // Flecha comum
+    void ElectricSword();    // Espada Elétrica
+    void Punt();             // Golpe forte ou arremesso
+    void FlameSword();       // Espada de Fogo
+    void SummonSkeleton();   // Invocar Esqueleto
+    void Suicide();          // Habilidade suicida
+    void Magic();            // Habilidade mágica genérica
+    void FireBall();         // Bola de Fogo
+    void ElectricBall();     // Bola Elétrica
+    void MagicBall();        // Bola Mágica
 
 
-
-    private:
-
+private:
+    int damage;         
+    int manaCost;
 
 };
