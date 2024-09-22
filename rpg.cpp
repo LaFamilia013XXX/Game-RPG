@@ -281,78 +281,89 @@ default:
 }
 }
 
-void Habilidade::ToxicArrow(int Dano,int &DanoporRound, int &Duracao)
-{
-    if(Duracao>0){
-        DanoporRound = 15;
-        Duracao--;
-        cout<<"Dano apos o efeito"<<Dano + << Duracao*DanoporRound<<endl;
-    }else{
-        DanoporRound = 0;
 
-    }
-}
+
+
+// habilidades da Arqueira
+
 
 // Reduz 20% do dano do inimigo 
-int Habilidade::ReduzirDano(int &DanoRecibido){
-    int DanoReduzido = DanoRecibido * 0.8;
+int Habilidade::ReduzirDano(int &DanoRecibido)
+{ // DanoRecebido é do inimigo
+    int DanoReduzido = DanoRecibido * 0.8;  
     return DanoReduzido;
-
 }
 
-  void habilidade::FlameArrow(int &Dano, int &Duracao)
+  void habilidade::FlameArrow(int &Dano, int &Duracao) // da dano e chama a funcao de reduzir o dano
   {
-
     if (Duracao > 0 ){
-
         Dano = 60;
-        ReduzirDano();
+        Dano =ReduzirDano(&Dano);
         Duracao--;
     }else{
         Dano = 0;
-
     }
+  }  
 
+    void Heroi::RecebeDano(int DanoRecebido){ // dano recebido no heroi para chamar ReceberDano( dano recebido)
 
-  }      
-    void Habilidade::Arrow(int &Dano)
+ HP-= DanoRecebido;
+ if (HP<0){
+    HP = 0;
+
+ }
+}
+
+    void Habilidade::Arrow(int &Dano)  // apenas dano da arqueira
     {
     Dano = 45;
     }     
 
-    void ElectricSword() 
-    {
-        
 
+
+
+
+//habilidades do barbaro
+
+    void ElectricSword(int &Dano)   // da dano normal
+    {
+        if(Duracao>0)
+        {
+        Dano = Dano*0.8;
+        }
     }
-    void Punt()    
+       
+    void FlameSword()  // da mais dano 
     {
-
-    }       
-    void FlameSword() 
-    {
-
     }   
-    void SummonSkeleton() 
+
+
+
+
+
+
+    // habilidades da bruxa
+    void Skeleton() 
     {
 
     }
-    void Suicide() 
-    {
 
-    }        
     void Magic()  
     {
 
-    }      
+    }   
+
+
+
+
+
+    // habilidades do mago
+
     void FireBall() 
     {
 
     }      
-    void ElectricBall()
-    {
-
-    }
+    
     void MagicBall()
     {
 

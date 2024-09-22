@@ -131,6 +131,9 @@ class Heroi
 
 void MostrandoTudo(); // EXIBE TODOS OS ATRIBUTOS
 void RecebeDano();
+void AumentarLuck();
+void NormalLuck();
+
 
     ~Heroi(); //destrutor
 
@@ -153,13 +156,10 @@ public:
     int ReduzirDano (int &DanoRecibido);
     void Arrow();            // Flecha comum
     void ElectricSword();    // Espada Elétrica
-    void Punt();             // Golpe forte ou arremesso
     void FlameSword();       // Espada de Fogo
-    void SummonSkeleton();   // Invocar Esqueleto
-    void Suicide();          // Habilidade suicida
+    void Skeleton();   // Invocar Esqueleto
     void Magic();            // Habilidade mágica genérica
     void FireBall();         // Bola de Fogo
-    void ElectricBall();     // Bola Elétrica
     void MagicBall();        // Bola Mágica
 
 
