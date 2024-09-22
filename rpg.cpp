@@ -17,8 +17,8 @@ cout << "Luck" << Luck <<endl;
 
 }
 
-Heroi::Heroi (const string name, int hp, int ataque, int defesa, int agilidade, int luck, string especial):
-Name (name), HP(hp), Ataque (ataque), Defesa (defesa), Agilidade (agilidade), Luck (luck), Especial (especial)
+Heroi::Heroi (const string name, int hp, int ataque, int defesa, int agilidade, int luck):
+Name (name), HP(hp), Ataque (ataque), Defesa (defesa), Agilidade (agilidade), Luck (luck)
 {
 if (HP<0){ // fazendo verificacao da vida
     HP = 0;
@@ -28,6 +28,9 @@ if (HP>200) // verificacao da vida
 {
     HP = 200;
 }
+
+Heroi::~HEROI(){}
+
 
 };
 

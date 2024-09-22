@@ -25,8 +25,7 @@ class Heroi
     int ataque,
     int defesa, 
     int agilidade, 
-    int luck, 
-    string especial);
+    int luck);
 
 void MostrandoTudo(); // EXIBE TODOS OS ATRIBUTOS
 void RecebeDano(int DanoRecebido);
@@ -42,7 +41,7 @@ void RecebeDano(int DanoRecebido);
         int Defesa;
         int Agilidade; 
         int Luck;
-        string Especial;
+
 };
 
     class Habilidade {
