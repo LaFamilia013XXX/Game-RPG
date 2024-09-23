@@ -32,6 +32,8 @@ if (HP>200) // verificacao da vida
 Heroi::~HEROI(){}
 
 
+
+
 };
 
  void Heroi::FuncaoMeuHeroi (EnumTipoHeroi heroi) //construtor da minha classe com parametros
